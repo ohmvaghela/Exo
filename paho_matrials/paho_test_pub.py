@@ -2,7 +2,6 @@ import paho.mqtt.client as paho
 import sys
 import numpy as np
 
-
     # goal_position
     # goal_velocity
     # effort
