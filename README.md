@@ -63,8 +63,45 @@
     idf.py -p /dev/ttyUSB0 monitor
     # once flashed just providing power source is enough
 
+`Station means will connect to wifi and softAP means work as Access Point or say will work as wifi `
+
+# Position control 2 code
+    - Data recived types
+        - command_payload
+            - goal_position;
+            - goal_velocity;
+            - effort;
+            - CONTROL_MODE mode;
+                - STOP = 0,
+                - POSITION = 1,
+                - VELCOCITY = 2,
+                - EFFORT = 3,
+            - STOP_INTURRPT emergency_command;
+                - NO_INTERRUPT = 0,
+                - MANUAL_STOP = 1,
+                - MASTER_STOP = 2,
+                - LOCAL_STOP = 3,
+        - pid (p,i,d)
+
+`about MQTT esp-idf tcp code`
+
+    - basic yet to be read
+    - MQTT_EVENT_CONNECTED,
+    - MQTT_EVENT_DISCONNECTED
+    - MQTT_EVENT_SUBSCRIBED
+    - MQTT_EVENT_UNSUBSCRIBED
+    - MQTT_EVENT_DATA
+    - MQTT_EVENT_ERROR
 
 
+
+`Multi esp communication`
+
+    - see code -> example/wifi/espnow
+    - MQTT broker -> example/protocal/mqtt/tcp
 
 for multiple esp use espnow in example/wifi
 solve heating issue
+
+160W
+magnetic codrej 
