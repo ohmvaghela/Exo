@@ -53,6 +53,22 @@
 
     idf.py -p /dev/ttyUSB0 monitor
 
+`to add external components`
+
+First make a folder named `components` and add components to it 
+
+CONFIG_FREERTOS_ENABLE_BACKWARD_COMPATIBILITY
+
+Then use this command for all newly added components in project folder
+
+    idf.py create-manifest --component=my_component1
+    idf.py create-manifest --component=my_component2
+    idf.py create-manifest --component=my_component3
+    .
+    .
+    .
+    idf.py reconfigure
+
 # Wifi connection using ESP32
 
     cd /home/ohm/esp-idf/wifi/getting_started/station
@@ -63,8 +79,9 @@
     idf.py -p /dev/ttyUSB0 monitor
     # once flashed just providing power source is enough
 
+#
 `Station means will connect to wifi and softAP means work as Access Point or say will work as wifi `
-
+#
 # Position control 2 code
     - Data recived types
         - command_payload
@@ -82,6 +99,8 @@
                 - MASTER_STOP = 2,
                 - LOCAL_STOP = 3,
         - pid (p,i,d)
+
+`MQTT default broker` mqtt://mqtt.eclipseprojects.io 
 
 `about MQTT esp-idf tcp code`
 
@@ -105,3 +124,17 @@ solve heating issue
 
 160W
 magnetic codrej 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
