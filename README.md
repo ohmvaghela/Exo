@@ -1,11 +1,15 @@
 # Esp8266
-<!-- https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html -->
+    https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html 
 
 # Esp32
-<!-- https://docs.micropython.org/en/latest/esp32/quickref.html -->
+    https://docs.micropython.org/en/latest/esp32/quickref.html 
 
-# flash drive
+# erase flash drive
     esptool.py --port /dev/ttyUSB0 erase_flash
+
+#
+> Always make /dev/ttyUSB0 as Access point and use other ports for exo 
+#
 
 # deploy new firmware
     cd /home/ohm/Documents/GitHub/Exo
@@ -121,6 +125,39 @@ Then use this command for all newly added components in project folder
 
 for multiple esp use espnow in example/wifi
 solve heating issue
+
+sudo cp -n /home/ohm/.espressif/tools/openocd-esp32/v0.11.0-esp32-20220411/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
+
+# while pip installing gdbgui following packages version were changed
+
+`requirement.txt path`
+
+    /home/ohm/esp/esp-idf/requirements.txt
+
+``
+
+    Installing collected packages: pygdbmi, brotli, werkzeug, six, python-engineio, pygments, markupsafe, itsdangerous, greenlet, dnspython, click, bidict, python-socketio, jinja2, eventlet, flask, flask-socketio, flask-compress, gdbgui
+    Attempting uninstall: python-engineio
+        Found existing installation: python-engineio 4.3.4
+        Uninstalling python-engineio-4.3.4:
+        Successfully uninstalled python-engineio-4.3.4
+    Attempting uninstall: greenlet
+        Found existing installation: greenlet 1.1.3
+        Uninstalling greenlet-1.1.3:
+        Successfully uninstalled greenlet-1.1.3
+    Attempting uninstall: bidict
+        Found existing installation: bidict 0.22.0
+        Uninstalling bidict-0.22.0:
+        Successfully uninstalled bidict-0.22.0
+    Attempting uninstall: python-socketio
+        Found existing installation: python-socketio 5.7.1
+        Uninstalling python-socketio-5.7.1:
+        Successfully uninstalled python-socketio-5.7.1
+    ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+    launchpadlib 1.10.13 requires testresources, which is not installed.
+    Successfully installed bidict-0.21.2 brotli-1.0.9 click-8.0.1 dnspython-2.2.1 eventlet-0.33.0 flask-2.0.1 flask-compress-1.10.1 flask-socketio-5.1.1 gdbgui-0.15.1.0 greenlet-1.1.2 itsdangerous-2.0.1 jinja2-3.0.1 markupsafe-2.0.1 pygdbmi-0.10.0.1 pygments-2.10.0 python-engineio-4.2.1 python-socketio-5.4.0 six-1.16.0 werkzeug-2.0.1
+
+
 
 160W
 magnetic codrej 
